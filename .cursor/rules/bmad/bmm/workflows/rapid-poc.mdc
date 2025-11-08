@@ -6,7 +6,7 @@ alwaysApply: false
 
 # Rapid PoC Workflow Configuration
 name: "rapid-poc"
-description: "Enable developers to rapidly implement working prototypes from high-level ideas by leveraging referenced documentation, known technical specifications, and research-backed best practices."
+description: "Enable developers to rapidly implement working prototypes for new projects or add significant feature updates to existing ones, leveraging referenced documentation, known technical specifications, and research-backed best practices."
 author: "BMad Builder"
 
 # Critical variables load from config_source
@@ -31,6 +31,8 @@ required_tools:
       description: "Required for fetching the latest documentation for technologies like Google ADK to inform planning and implementation."
   - "deepwiki mcp":
       description: "Required for retrieving wiki docs and code patterns from existing repositories to ensure consistency and leverage internal knowledge."
+  - "package-version mcp":
+      description: "Required for checking the latest version of packages from npm or PyPI."
 
 # Web Bundle Configuration (optional - for web-deployable workflows)
 # This workflow's reliance on local MCPs makes it a poor candidate for a generic web bundle.

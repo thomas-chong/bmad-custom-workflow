@@ -1,0 +1,35 @@
+---
+description: BMAD BMM Workflow: rapid-bug-fix
+globs: 
+alwaysApply: false
+---
+
+# Rapid Bug Fix Workflow Configuration
+name: "rapid-bug-fix"
+description: "Enable developers to rapidly identify and fix bugs by leveraging live documentation from Context7 and DeepWiki, and generating accurate queries for solutions."
+author: "BMad Builder"
+
+# Critical variables load from config_source
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+date: system-generated
+
+# Module path and component files
+installed_path: "{project-root}/bmad/bmm/workflows/rapid-bug-fix"
+template: "{installed_path}/template.md"
+instructions: "{installed_path}/instructions.md"
+validation: "{installed_path}/checklist.md"
+
+# Invocation Control
+standalone: true
+
+# Tool Requirements
+required_tools:
+  - "context7 mcp":
+      description: "Required for fetching relevant documentation to inform bug analysis and solution."
+  - "deepwiki mcp":
+      description: "Required for retrieving internal wiki docs and code patterns for bug resolution."
+  - "package-version mcp":
+      description: "Required for checking the latest version of packages from npm or PyPI, if dependency updates are part of the fix."

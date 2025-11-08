@@ -1,5 +1,5 @@
 ---
-description: 'Enable developers to rapidly implement working prototypes from high-level ideas by leveraging referenced documentation, known technical specifications, and research-backed best practices.'
+description: 'Enable developers to rapidly implement working prototypes for new projects or add significant feature updates to existing ones, leveraging referenced documentation, known technical specifications, and research-backed best practices.'
 ---
 
 # rapid-poc

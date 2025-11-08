@@ -91,6 +91,7 @@ BMAD rules have been installed to: `.cursor/rules/bmad/`
 - @bmad/bmm/workflows/story-done - story-done
 - @bmad/bmm/workflows/story-ready - story-ready
 - @bmad/bmm/workflows/document-project - document-project
+- @bmad/bmm/workflows/rapid-bug-fix - rapid-bug-fix
 - @bmad/bmm/workflows/rapid-poc - rapid-poc
 - @bmad/bmm/workflows/workflow-init - workflow-init
 - @bmad/bmm/workflows/workflow-status - workflow-status
