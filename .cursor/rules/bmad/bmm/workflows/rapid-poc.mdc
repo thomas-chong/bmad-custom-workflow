@@ -1,0 +1,37 @@
+---
+description: BMAD BMM Workflow: rapid-poc
+globs: 
+alwaysApply: false
+---
+
+# Rapid PoC Workflow Configuration
+name: "rapid-poc"
+description: "Enable developers to rapidly implement working prototypes from high-level ideas by leveraging referenced documentation, known technical specifications, and research-backed best practices."
+author: "BMad Builder"
+
+# Critical variables load from config_source
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+date: system-generated
+
+# Module path and component files
+installed_path: "{project-root}/bmad/bmm/workflows/rapid-poc"
+template: false # This is a meta/action workflow
+instructions: "{installed_path}/instructions.md"
+validation: "{installed_path}/checklist.md"
+
+# Invocation Control
+standalone: true
+
+# Tool Requirements
+required_tools:
+  - "context7 mcp":
+      description: "Required for fetching the latest documentation for technologies like Google ADK to inform planning and implementation."
+  - "deepwiki mcp":
+      description: "Required for retrieving wiki docs and code patterns from existing repositories to ensure consistency and leverage internal knowledge."
+
+# Web Bundle Configuration (optional - for web-deployable workflows)
+# This workflow's reliance on local MCPs makes it a poor candidate for a generic web bundle.
+# A specialized deployment would be needed.

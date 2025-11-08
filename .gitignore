@@ -1,0 +1,97 @@
+Preventing credential leaks is crucial when working with AI command-line interfaces. Here is a comprehensive `.gitignore` file designed to safeguard your sensitive information for Gemini CLI, Claude Code, and Qwen Code, while still allowing you to push custom tool configurations.
+
+This `.gitignore` file is structured to ignore common credential and local configuration files associated with these tools.
+
+################################################################################
+# General credential and sensitive file patterns
+################################################################################
+
+# Environment variables files
+.env
+.env.*
+!.env.example
+
+# Private keys
+*.pem
+*.key
+
+# Credential files
+credentials.json
+credentials.yml
+credentials.yaml
+
+# Log files that might contain sensitive output
+*.log
+
+# AWS credentials
+.aws/credentials
+.aws/config
+
+################################################################################
+# Gemini CLI
+#
+# Ignores user-specific settings and local environment configurations.
+# Pushing the project-specific '.gemini/settings.json' is often desired for
+# sharing non-sensitive project configurations with the team. However, if it
+# contains sensitive information, you should uncomment the line below.
+################################################################################
+
+# Ignore local Gemini environment file.
+.gemini/.env
+
+# User-specific global settings should not be committed.
+~/.gemini/settings.json
+
+# Ignore project's settings file (may contain secrets).
+.gemini/settings.json
+
+# Google Application Credentials file.
+# It's best practice to name this file something specific and list it here.
+# For example, if your file is named 'google-credentials.json':
+google-credentials.json
+*-credentials.json
+
+################################################################################
+# Claude Code
+#
+# Ignores local settings and user-specific configurations.
+# The '.claude/settings.json' can be committed to share project-level tool
+# configurations, but the 'settings.local.json' is for personal overrides
+# and should always be ignored.
+################################################################################
+
+# Ignore local settings override file for Claude Code.
+.mcp.json
+
+# User-specific global settings.
+.mcp.json
+
+# The memory cache for Claude Code.
+.claude/memory/
+~/.claude/
+
+################################################################################
+# Qwen Code
+#
+# Ignores local and user-specific Qwen Code configurations.
+# Similar to the other tools, '.qwen/settings.json' can be versioned if it
+# does not contain sensitive data.
+################################################################################
+
+# Ignore local environment file for Qwen credentials.
+.qwen.env
+
+# User-specific global settings for Qwen Code.
+~/.qwen/settings.json
+
+# Ignore project's settings file (may contain secrets).
+.qwen/settings.json
+
+### How to Use This `.gitignore`
+
+1.  **Create the file**: In the root directory of your Git repository, create a file named `.gitignore`.
+2.  **Copy and paste**: Copy the content above and paste it into your `.gitignore` file.
+3.  **Customize**: Review the commented sections. You may need to uncomment certain lines depending on your project's specific needs. For instance, if your project-level `settings.json` for any of the CLIs contains sensitive information, you should uncomment the corresponding line to ignore it.
+4.  **Commit**: Add and commit the `.gitignore` file to your repository.
+
+By using this `.gitignore` file, you establish a strong foundation for preventing the accidental exposure of API keys and other sensitive credentials, thereby enhancing the security of your development workflow.
