@@ -1,0 +1,37 @@
+# Technical Blog Creator Workflow Configuration
+name: "technical-blog-creator"
+description: "Create comprehensive, high-quality technical blog posts with working code demos, detailed visual aids, and human-readable content for AI Engineers, MLEs, Software Engineers, and AI Researchers. Supports academic paper summaries, tutorials, feature highlights, and technical demos."
+author: "BMad"
+
+# Critical variables load from config_source
+config_source: "{project-root}/bmad/bmm/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+date: system-generated
+
+# Module path and component files
+installed_path: "{project-root}/bmad/bmm/workflows/technical-blog-creator"
+template: "{installed_path}/template.md"
+instructions: "{installed_path}/instructions.md"
+validation: "{installed_path}/checklist.md"
+
+# Output configuration
+default_output_file: "{output_folder}/blog-{{topic_slug}}-{{date}}.md"
+
+# Invocation Control
+standalone: true
+
+# Tool Requirements
+required_tools:
+  - "deepwiki mcp":
+      description: "Required for fetching public repository wikis and documentation for technical reference."
+  - "context7 mcp":
+      description: "Required for accessing library documentation and API references during implementation."
+  - "chrome-devtools mcp":
+      description: "Required for automated browser demos, screenshots, and Medium blog publishing automation."
+
+# Optional Inputs
+recommended_inputs:
+  - topic_references: "Initial research materials (URLs, documents, papers)"
+  - existing_code: "Existing codebase or examples to reference"
