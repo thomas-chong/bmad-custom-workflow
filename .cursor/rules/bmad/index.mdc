@@ -93,6 +93,7 @@ BMAD rules have been installed to: `.cursor/rules/bmad/`
 - @bmad/bmm/workflows/document-project - document-project
 - @bmad/bmm/workflows/rapid-bug-fix - rapid-bug-fix
 - @bmad/bmm/workflows/rapid-poc - rapid-poc
+- @bmad/bmm/workflows/technical-blog-creator - technical-blog-creator
 - @bmad/bmm/workflows/workflow-init - workflow-init
 - @bmad/bmm/workflows/workflow-status - workflow-status
 

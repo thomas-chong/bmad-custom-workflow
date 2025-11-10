@@ -42,6 +42,7 @@ type,name,module,path,hash
 "workflow","story-done","bmm","bmad/bmm/workflows/4-implementation/story-done/workflow.yaml","9edfac176cc3919bbf753e8671c38fb98a210f6a68c341abbf0cc39633435043"
 "workflow","story-ready","bmm","bmad/bmm/workflows/4-implementation/story-ready/workflow.yaml","7c59d8ffaacb9982014fdad8c95ac1a99985ee4641a33130f251cc696fcf6bde"
 "workflow","tech-spec","bmm","bmad/bmm/workflows/2-plan-workflows/tech-spec/workflow.yaml","4dde10d1478b813f99c529195c12c05938599fb5803e957b6ba23726112cda49"
+"workflow","technical-blog-creator","bmm","bmad/bmm/workflows/technical-blog-creator/workflow.yaml","5c3c89001e3944db3123d9014494e0ddcc20cc157c62a79ac5fa52115d65286a"
 "workflow","testarch-atdd","bmm","bmad/bmm/workflows/testarch/atdd/workflow.yaml","b1bc5f8101fabf3fd1dd725d3fd1e5d8568e5497856ccf0556c86a0435214d95"
 "workflow","testarch-automate","bmm","bmad/bmm/workflows/testarch/automate/workflow.yaml","44b21e50e8419dbfdfbf7281b61f9e6f6630f4e9cf720fbe5e54b236d9d5e90d"
 "workflow","testarch-ci","bmm","bmad/bmm/workflows/testarch/ci/workflow.yaml","de89801ec80bd7e13c030a2912b4eee8992e8e2bfd020b59f85466d3569802f9"
